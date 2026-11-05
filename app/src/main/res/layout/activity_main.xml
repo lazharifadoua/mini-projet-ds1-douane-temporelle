@@ -1,19 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
+
+<!-- LinearLayout : howa l conteneur lprincipal mta3 l'interface ykhalina nhotou
+ les elements fou9 badhhom b orientation verticale w ykounou centre -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="@android:color/background_light">
+
+    <!--  TextView : yaffichi titre mta3 el application w titre yodhhor b font gras w taille 24sp
+    marginbotton ta3mel espace binou w bin el élément elli ba3dou -->
 
     <TextView
+        android:id="@+id/titre_nj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="DOUANE TEMPORELLE"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="25dp"/>
+    <!--EditText : y5alli el utilisateur yekteb esm el voyageur Hint ya3ti exemple
+    de texte 9bal ma yekteb el utilisateur textpersonname ya3ni el champ mخصص lel esem
+      -->
+    <EditText
+        android:id="@+id/txt_nom_nj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom du voyageur"
+        android:inputType="textPersonName"/>
+    <!-- EditText : y5alli el utilisateur yekteb 3am el naissance mta3ou inputType=
+     "number" ya3ni el clavier elli yodhhor fih ykoun clavier numérique bech ysahel el saisie.
+    -->
+    <EditText
+        android:id="@+id/txt_naissance_nj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Année de naissance (ex: 1990)"
+        android:inputType="number"/>
+    <!--EditText : y5alli el utilisateur yekteb l'annee mta3 el destinantion elli
+     y7eb yemchi fih Zeda nesta3mlou clavier numérique 5ater bech yekteb 3am -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/txt_destination_nj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Année de destination (ex: 2050)"
+        android:inputType="number"/>
+    <!-- textView yaffichi el 3ibara "Motif du voyage" ywajjah el utilisateur bech ya3ref elli
+    lezemou ye5tar sabab el voyage -->
+
+    <TextView
+        android:id="@+id/lbl_motif_nj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Motif du voyage :"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"/>
+    <!-- Spinner yaffichi liste déroulante fiha plusieurs choix l utilisateur ye5tar
+    menha motif el voyage mta3ou les choix bech nzidouhom ba3d fel fichier MainActivity.java
+     -->
+
+    <Spinner
+        android:id="@+id/sp_motif_nj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- button howa el bouton elli el utilisateur yenzel 3lih ba3d ma y3abbi les
+    informations w ye5tar motif el voyage yebda bih étape mta3 vérification elli bech nprogrammiwha
+    fel java main activity-->
+
+    <Button
+        android:id="@+id/btn_inspecter_nj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inspecter le profil"
+        android:layout_marginTop="25dp"/>
+
+</LinearLayout>
