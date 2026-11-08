@@ -50,10 +50,8 @@
         android:textStyle="bold"
         android:textColor="@android:color/black"/>
 
-    <!--
-        TextView yaffichi esm el voyageur El esm bech yet3awdh  fel Java bel information elli weslet
-        men MainActivity b Intent.
-    -->
+    <!-- TextView yaffichi esm el voyageur El esm bech yet3awdh  fel Java bel information elli weslet
+        men MainActivity b Intent -->
     <TextView
         android:id="@+id/txt_nom_recu_nj"
         android:layout_width="match_parent"
