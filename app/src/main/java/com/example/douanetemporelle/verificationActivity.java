@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class VerificationActivity extends Activity {
+public class verificationActivity extends Activity {
 
     TextView txtNom, txtAge, txtMotif, txtAlerte;
     Button btnApprouver, btnRefuser;
@@ -122,8 +122,7 @@ public class VerificationActivity extends Activity {
     // Nab3thou fiha verdict el nihai w esm el voyageur.
     private void envoyerVerdict(boolean verdict) {
 
-        Intent i = new Intent(VerificationActivity.this,
-                ResultActivity.class); //naamlou intent jdid bch nmchyw l rsultactivity
+        Intent i = new Intent(verificationActivity.this, resultActivity.class); //naamlou intent jdid bch nmchyw l rsultactivity
 
         i.putExtra(
                 IntentKeys.verdict(IntentKeys.MATRICULE),

@@ -3,7 +3,7 @@ package com.example.douanetemporelle;
 
 
 
-public class IntentKeys {
+class IntentKeys {
 
     //// trajaalk el cle eli tnajem a partir de lui trajaalk el valeur mte3ou
 
