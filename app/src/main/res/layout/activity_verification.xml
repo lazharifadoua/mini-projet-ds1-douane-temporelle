@@ -1,0 +1,133 @@
+<!--
+      LinearLayout howa el conteneur principal mta3 l'écran.
+       Orientation horizontal ta3mel partie lel image left
+   -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@android:color/background_light">
+
+    <!--
+        ImageView nesta3mlouh bech naffichiw image fel partie lisar.
+        Layout_weight="0.3" ya3ni el image te5ou 30% men l'espace disponible.
+        ScaleType centerInside t5alli el image todhhor kemla fel espace mta3ha.
+    -->
+    <ImageView
+        android:id="@+id/img_passeport_nj"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:padding="20dp"
+        android:src="@drawable/passeport_temporel"
+        android:scaleType="centerInside"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Image du passeport temporel"/>
+
+    <!--
+        RelativeLayout howa el partie elli fiha les informations mta3 voyageur.
+        Layout_weight="0.7" ya3ni te5ou 70% men l'espace disponible.
+
+    -->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:padding="15dp"
+        android:background="@android:color/white">
+
+        <!--
+            TextView yaffichi titre mta3 el écran Nesta3mlouh bech na3tiw l'interface titre eli howa  "PASSEPORT TEMPOREL".
+        -->
+        <TextView
+            android:id="@+id/titre_verification_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PASSEPORT TEMPOREL"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <!-- TextView yaffichi esm el voyageur El esm bech yet3awdh  fel Java bel information elli weslet
+            men MainActivity b Intent -->
+        <TextView
+            android:id="@+id/txt_nom_recu_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titre_verification_nj"
+            android:layout_marginTop="25dp"
+            android:text="Nom du voyageur"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!--
+            TextView yaffichi el âge temporel mta3 el voyageur w El âge mte3ou  yet7seb fel Java b différence bin 3am el naissance
+            w 3am el destination.
+        -->
+        <TextView
+            android:id="@+id/txt_age_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_nom_recu_nj"
+            android:layout_marginTop="15dp"
+            android:text="Âge temporel"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!--
+            TextView yaffichi motif el voyage elli 3jeb  el user
+        -->
+        <TextView
+            android:id="@+id/txt_motif_recu_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_age_nj"
+            android:layout_marginTop="15dp"
+            android:text="Motif du voyage"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!--
+            TextView yaffichi message d'alerte ken fama risque de paradoxe El message bech yetbadel fel Java 7asb el condition mta3 nombre premier.
+        -->
+        <TextView
+            android:id="@+id/txt_alerte_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_motif_recu_nj"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"/>
+
+        <!--
+            fi LinearLayout nal9aw  les deux boutons fi partie louta mta3 l'écran Orientation vertical t7ot el boutons fou9 ba3dhhom AlignParentBottom y7ot zone mta3 les boutons louta
+        -->
+        <LinearLayout
+            android:id="@+id/zone_boutons_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <!--
+                Button y5alli el utilisateur ya9bel el voyage temporel El bouton ynajjem yet3attel fel Java ken fama risque de paradoxe.
+            -->
+            <Button
+                android:id="@+id/btn_approuver_nj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Approuver le saut temporel"/>
+
+            <Button
+                android:id="@+id/btn_refuser_nj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refuser (Risque de paradoxe)"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

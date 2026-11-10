@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+// lconteneur  principale li bch nlemou fih les elements mtaa l'ecran
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_resultat_nj"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@android:color/background_light">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+// hedha titre li bch yodhhr f l'interface li houwa  Résultat du voyage
+    <TextView
+        android:id="@+id/titre_resultat_nj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Résultat du voyage"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="30dp"/>
+
+//Hedha texte bech naffichiw fih résultat mta3 el voyage wl contenu mte3ou yetbadal hasb res li tji mel app
+    <TextView
+        android:id="@+id/txt_message_resultat_nj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Résultat"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"/>
+
+// bouton hedhy ki tenzel aaliha tnajam tarjaa tabda saisir mta3 voyageur jdid
+    <Button
+        android:id="@+id/btn_nouveau_voyageur_nj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nouveau voyageur"/>
+
+</LinearLayout>

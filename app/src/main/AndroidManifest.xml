@@ -1,26 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Houni nebdew fichier AndroidManifest.xml l fichier hedha fih les informations el asasiya
+mta3 l'application kif esm el activités w chnowa l'activité elli tebda biha l'application-->
+
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        El balise application fiha les paramètres el 3amma mta3 l'application.
+        Ya3ni houni n7adddou esm l'application, l'icone, el thème
+        w ba3dh les paramètres elli Android yesta3melhom ki ychaghel l'application.
+    -->
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="DouaneTemporelle"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DouaneTemporelle">
+
+        <!--
+            Houni n3arrefou ResultActivity fi Manifest.
+            Hedhi l'activité elli todhhor fiha natija mta3 el voyage temporel,
+            ya3ni ken el voyage accepté wala refusé.
+            Exported false ma3neha les applications lokhrin ma ynajmouch
+            y7allou l'activité hedhi directement.
+        -->
+
+        <activity
+            android:name=".resultActivity"
+            android:exported="false" />
+
+        <!--
+            Houni n3arrefou verificationActivity fi Manifest.
+            Hedhi l'activité elli testa9bel les informations mta3 el voyageur
+            w t'affichihom bech ysir el vérification 9bal ma na9blou wala nrefdhou
+            el voyage temporel.
+            Exported false ma3neha l'activité hedhi ma tet7allech directement
+            men applications lokhrin.
+        -->
+
+        <activity
+            android:name=".verificationActivity"
+            android:exported="false" />
+
+        <!--
+            Houni n3arrefou MainActivity, elli hiya l'activité principale.
+            Hiya awel interface tet7al ki l'utilisateur yenzel 3al icone
+            mta3 application Douane Temporelle.
+            Exported true khater Android w launcher lezemhom ynajmou
+            yebdew l'activité hedhi.
+            WindowSoftInputMode adjustResize ya3ni ki el clavier yodhhor,
+            l'interface tetna9es fi hauteur bech el utilisateur ynajjem
+            ychouf w yesta3mel les champs elli mawjoudin fiha.
+        -->
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
+
+            <!--
+                Intent-filter ya3ti l'activité MainActivity des informations
+                3la naw3 el demandes elli tnajjem testa9belhom.
+                Houni nesta3mlouh bech n9oulou lel Android elli MainActivity
+                hiya el point de départ mta3 l'application.
+            -->
+
             <intent-filter>
+
+                <!--
+                    MAIN ta3ni elli MainActivity hiya l'activité principale
+                    elli Android yebda menha ki ychaghel l'application.
+                -->
+
                 <action android:name="android.intent.action.MAIN" />
 
+                <!--
+                    LAUNCHER ta3ni elli l'application tnajjem todhhor
+                    fi liste des applications w l'utilisateur ynajjem
+                    y7ellha men l'icone mte3ha.
+                -->
+
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
+
         </activity>
+
     </application>
 
 </manifest>
